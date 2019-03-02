@@ -1,12 +1,12 @@
 Main {
 Dark violet: #372360;
-Violent: #5a2dae;
+Violet: #5a2dae;
 White: #ffffff;
-Light violent: #f2f7fd;
+Light violet: #f2f7fd;
 }
 
 Accent {
-Light violent: #d8e3f8; (text on main light violent)
-Violent: #4b2791; (text on main violent)
-Another violent: #8543ff;
+Light violet: #d8e3f8; (text on main light violet)
+Violet: #4b2791; (text on main violet)
+Another violet: #8543ff;
 }
