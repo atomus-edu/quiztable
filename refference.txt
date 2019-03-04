@@ -1,0 +1,5 @@
+home.png: https://www.flaticon.com/free-icon/home_102061
+puzzle.png: https://www.flaticon.com/free-icon/puzzle_69154
+settings.png: https://www.flaticon.com/free-icon/settings_23408
+question.png: https://www.flaticon.com/free-icon/question-mark_36601
+table.png: https://www.flaticon.com/free-icon/table-grid_25617

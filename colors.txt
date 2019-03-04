@@ -1,0 +1,12 @@
+Main {
+Dark violet: #372360;
+Violet: #5a2dae;
+White: #ffffff;
+Light violet: #f2f7fd;
+}
+
+Accent {
+Light violet: #d8e3f8; (text on main light violet)
+Violet: #4b2791; (text on main violet)
+Another violet: #8543ff;
+}
