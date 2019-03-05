@@ -1,0 +1,13 @@
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\bin\Release\QuizTableCS.exe.config
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\bin\Release\QuizTableCS.exe
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\bin\Release\QuizTableCS.pdb
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.fMain.resources
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.MainPage.resources
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.Properties.Resources.resources
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.PuzzlePage.resources
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.SettingsPage.resources
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.TablePage.resources
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.csproj.GenerateResource.cache
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.exe
+C:\Users\Александр\Documents\GitHub\QuizTableCS\QuizTableCS\obj\Release\QuizTableCS.pdb
