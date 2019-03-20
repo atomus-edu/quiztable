@@ -23,6 +23,14 @@ namespace QuizTableCS
             puzzlePage.BackColor = LightViolet;
             tablePage.BackColor = LightViolet;
             settingsPage.BackColor = LightViolet;
+
+
+            DefaultPagePosition();
+            btnHome.BackColor = Color.White;
+            btnHome.Image = Image.FromFile(@"img\home_violet_24.png");
+            mainPage.Visible = true;
+
+            pTop.BackColor = LightViolet;
         }
 
         public void DefaultPagePosition()
@@ -81,6 +89,11 @@ namespace QuizTableCS
             btnSettings.BackColor = Color.White;
             btnSettings.Image = Image.FromFile(@"img\settings_violet_24.png");
             settingsPage.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
