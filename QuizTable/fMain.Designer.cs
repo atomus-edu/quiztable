@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pTop = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnQuestion = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.bntGame = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pTop = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.mainPage = new QuizTableCS.MainPage();
             this.puzzlePage = new QuizTableCS.PuzzlePage();
             this.settingsPage = new QuizTableCS.SettingsPage();
@@ -62,74 +62,6 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(40, 572);
             this.sidePanel.TabIndex = 5;
-            // 
-            // pTop
-            // 
-            this.pTop.BackColor = System.Drawing.SystemColors.Control;
-            this.pTop.Controls.Add(this.btnMinimize);
-            this.pTop.Controls.Add(this.btnMaximize);
-            this.pTop.Controls.Add(this.label1);
-            this.pTop.Controls.Add(this.btnExit);
-            this.pTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pTop.Location = new System.Drawing.Point(40, 0);
-            this.pTop.Name = "pTop";
-            this.pTop.Size = new System.Drawing.Size(993, 27);
-            this.pTop.TabIndex = 9;
-            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
-            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
-            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "QuizTable";
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::QuizTableCS.Properties.Resources.minus_math_24px;
-            this.btnMinimize.Location = new System.Drawing.Point(849, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(48, 27);
-            this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Image = global::QuizTableCS.Properties.Resources.maximize_24px;
-            this.btnMaximize.Location = new System.Drawing.Point(897, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(48, 27);
-            this.btnMaximize.TabIndex = 2;
-            this.btnMaximize.Tag = "0";
-            this.btnMaximize.Text = " ";
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = global::QuizTableCS.Properties.Resources.close2;
-            this.btnExit.Location = new System.Drawing.Point(945, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(48, 27);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.button1_Click);
-            this.btnExit.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
-            this.btnExit.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // btnQuestion
             // 
@@ -200,6 +132,74 @@
             this.toolTip1.SetToolTip(this.btnTable, "Періодична таблиця");
             this.btnTable.UseVisualStyleBackColor = true;
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
+            // 
+            // pTop
+            // 
+            this.pTop.BackColor = System.Drawing.Color.White;
+            this.pTop.Controls.Add(this.btnMinimize);
+            this.pTop.Controls.Add(this.btnMaximize);
+            this.pTop.Controls.Add(this.label1);
+            this.pTop.Controls.Add(this.btnExit);
+            this.pTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pTop.Location = new System.Drawing.Point(40, 0);
+            this.pTop.Name = "pTop";
+            this.pTop.Size = new System.Drawing.Size(993, 27);
+            this.pTop.TabIndex = 9;
+            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
+            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
+            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Image = global::QuizTableCS.Properties.Resources.minus_math_24px;
+            this.btnMinimize.Location = new System.Drawing.Point(849, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(48, 27);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.Image = global::QuizTableCS.Properties.Resources.maximize_24px;
+            this.btnMaximize.Location = new System.Drawing.Point(897, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(48, 27);
+            this.btnMaximize.TabIndex = 2;
+            this.btnMaximize.Tag = "0";
+            this.btnMaximize.Text = " ";
+            this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "QuizTable";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = global::QuizTableCS.Properties.Resources.close2;
+            this.btnExit.Location = new System.Drawing.Point(945, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(48, 27);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.button1_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // mainPage
             // 
