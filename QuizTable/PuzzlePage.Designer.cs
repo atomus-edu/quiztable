@@ -39,7 +39,7 @@
             this.pSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pSide.Location = new System.Drawing.Point(0, 0);
             this.pSide.Name = "pSide";
-            this.pSide.Size = new System.Drawing.Size(221, 554);
+            this.pSide.Size = new System.Drawing.Size(221, 542);
             this.pSide.TabIndex = 0;
             // 
             // panel2
@@ -48,7 +48,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(221, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 554);
+            this.panel2.Size = new System.Drawing.Size(1, 542);
             this.panel2.TabIndex = 1;
             // 
             // PuzzlePage
@@ -58,7 +58,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pSide);
             this.Name = "PuzzlePage";
-            this.Size = new System.Drawing.Size(967, 554);
+            this.Size = new System.Drawing.Size(996, 542);
             this.ResumeLayout(false);
 
         }

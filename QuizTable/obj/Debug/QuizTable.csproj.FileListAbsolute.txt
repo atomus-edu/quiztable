@@ -30,3 +30,17 @@ C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.Puzzle
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.SettingsPage.resources
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.TablePage.resources
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csproj.GenerateResource.Cache
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTableCS.exe.config
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTableCS.exe
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTableCS.pdb
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csprojAssemblyReference.cache
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.fMain.resources
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.MainPage.resources
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.Properties.Resources.resources
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.PuzzlePage.resources
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.SettingsPage.resources
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.TablePage.resources
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csproj.GenerateResource.cache
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.exe
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.pdb
