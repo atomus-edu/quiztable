@@ -174,7 +174,13 @@
     <None Include="bin\Debug\img\question_white_24.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\img\close.png" />
+    <None Include="bin\Debug\img\close2.png" />
     <Content Include="bin\Debug\img\home_violet_24.png" />
+    <None Include="bin\Debug\img\maximize_24px.png" />
+    <None Include="bin\Debug\img\minus_math_24px.png" />
+    <None Include="bin\Debug\img\maximize_32px.png" />
+    <None Include="bin\Debug\img\minus_math_32px.png" />
     <Content Include="bin\Debug\img\puzzle_violet_24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

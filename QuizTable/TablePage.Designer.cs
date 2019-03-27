@@ -38,7 +38,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 450);
+            this.panel1.Size = new System.Drawing.Size(221, 542);
             this.panel1.TabIndex = 1;
             // 
             // TablePage
@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "TablePage";
-            this.Size = new System.Drawing.Size(760, 450);
+            this.Size = new System.Drawing.Size(996, 542);
             this.ResumeLayout(false);
 
         }

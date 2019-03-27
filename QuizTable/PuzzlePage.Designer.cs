@@ -28,32 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pSide = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // panel1
+            // pSide
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 450);
-            this.panel1.TabIndex = 0;
+            this.pSide.AutoScroll = true;
+            this.pSide.BackColor = System.Drawing.Color.White;
+            this.pSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pSide.Location = new System.Drawing.Point(0, 0);
+            this.pSide.Name = "pSide";
+            this.pSide.Size = new System.Drawing.Size(221, 542);
+            this.pSide.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(221, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 542);
+            this.panel2.TabIndex = 1;
             // 
             // PuzzlePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pSide);
             this.Name = "PuzzlePage";
-            this.Size = new System.Drawing.Size(760, 450);
+            this.Size = new System.Drawing.Size(996, 542);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pSide;
+        private System.Windows.Forms.Panel panel2;
     }
 }

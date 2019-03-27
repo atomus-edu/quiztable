@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.lblMain = new System.Windows.Forms.Label();
             this.bigPanel = new System.Windows.Forms.Panel();
-            this.smalPanel = new System.Windows.Forms.Panel();
-            this.lblBigPanel = new System.Windows.Forms.Label();
-            this.lblSmalPanel = new System.Windows.Forms.Label();
             this.bigRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.lblBigPanel = new System.Windows.Forms.Label();
+            this.smalPanel = new System.Windows.Forms.Panel();
             this.smallRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.lblSmalPanel = new System.Windows.Forms.Label();
             this.bigPanel.SuspendLayout();
             this.smalPanel.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +45,7 @@
             this.lblMain.AutoSize = true;
             this.lblMain.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblMain.ForeColor = System.Drawing.Color.Indigo;
-            this.lblMain.Location = new System.Drawing.Point(48, 32);
+            this.lblMain.Location = new System.Drawing.Point(48, 36);
             this.lblMain.Name = "lblMain";
             this.lblMain.Size = new System.Drawing.Size(148, 40);
             this.lblMain.TabIndex = 0;
@@ -57,17 +57,21 @@
             this.bigPanel.Controls.Add(this.lblBigPanel);
             this.bigPanel.Location = new System.Drawing.Point(55, 123);
             this.bigPanel.Name = "bigPanel";
-            this.bigPanel.Size = new System.Drawing.Size(446, 275);
+            this.bigPanel.Size = new System.Drawing.Size(636, 342);
             this.bigPanel.TabIndex = 1;
             // 
-            // smalPanel
+            // bigRichTextBox
             // 
-            this.smalPanel.Controls.Add(this.smallRichTextBox);
-            this.smalPanel.Controls.Add(this.lblSmalPanel);
-            this.smalPanel.Location = new System.Drawing.Point(527, 123);
-            this.smalPanel.Name = "smalPanel";
-            this.smalPanel.Size = new System.Drawing.Size(200, 275);
-            this.smalPanel.TabIndex = 2;
+            this.bigRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bigRichTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.bigRichTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bigRichTextBox.Location = new System.Drawing.Point(11, 50);
+            this.bigRichTextBox.Name = "bigRichTextBox";
+            this.bigRichTextBox.ReadOnly = true;
+            this.bigRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.bigRichTextBox.Size = new System.Drawing.Size(614, 281);
+            this.bigRichTextBox.TabIndex = 4;
+            this.bigRichTextBox.Text = resources.GetString("bigRichTextBox.Text");
             // 
             // lblBigPanel
             // 
@@ -80,6 +84,29 @@
             this.lblBigPanel.TabIndex = 3;
             this.lblBigPanel.Text = "Lorem ipsum dolor sit amet";
             // 
+            // smalPanel
+            // 
+            this.smalPanel.Controls.Add(this.smallRichTextBox);
+            this.smalPanel.Controls.Add(this.lblSmalPanel);
+            this.smalPanel.Location = new System.Drawing.Point(743, 123);
+            this.smalPanel.Name = "smalPanel";
+            this.smalPanel.Size = new System.Drawing.Size(200, 342);
+            this.smalPanel.TabIndex = 2;
+            // 
+            // smallRichTextBox
+            // 
+            this.smallRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.smallRichTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.smallRichTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.smallRichTextBox.Location = new System.Drawing.Point(14, 50);
+            this.smallRichTextBox.Name = "smallRichTextBox";
+            this.smallRichTextBox.ReadOnly = true;
+            this.smallRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.smallRichTextBox.Size = new System.Drawing.Size(176, 281);
+            this.smallRichTextBox.TabIndex = 5;
+            this.smallRichTextBox.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua.";
+            // 
             // lblSmalPanel
             // 
             this.lblSmalPanel.AutoSize = true;
@@ -91,33 +118,6 @@
             this.lblSmalPanel.TabIndex = 3;
             this.lblSmalPanel.Text = "Lorem ipsum dolor?";
             // 
-            // bigRichTextBox
-            // 
-            this.bigRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bigRichTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.bigRichTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bigRichTextBox.Location = new System.Drawing.Point(11, 50);
-            this.bigRichTextBox.Name = "bigRichTextBox";
-            this.bigRichTextBox.ReadOnly = true;
-            this.bigRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.bigRichTextBox.Size = new System.Drawing.Size(424, 214);
-            this.bigRichTextBox.TabIndex = 4;
-            this.bigRichTextBox.Text = resources.GetString("bigRichTextBox.Text");
-            // 
-            // smallRichTextBox
-            // 
-            this.smallRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.smallRichTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.smallRichTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.smallRichTextBox.Location = new System.Drawing.Point(14, 37);
-            this.smallRichTextBox.Name = "smallRichTextBox";
-            this.smallRichTextBox.ReadOnly = true;
-            this.smallRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.smallRichTextBox.Size = new System.Drawing.Size(176, 227);
-            this.smallRichTextBox.TabIndex = 5;
-            this.smallRichTextBox.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.";
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,7 +127,7 @@
             this.Controls.Add(this.bigPanel);
             this.Controls.Add(this.lblMain);
             this.Name = "MainPage";
-            this.Size = new System.Drawing.Size(760, 450);
+            this.Size = new System.Drawing.Size(996, 542);
             this.bigPanel.ResumeLayout(false);
             this.bigPanel.PerformLayout();
             this.smalPanel.ResumeLayout(false);
