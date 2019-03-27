@@ -227,5 +227,24 @@ namespace QuizTableCS
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT)
                 m.Result = (IntPtr)HTCAPTION;
         }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            //if (btnMaximize.Tag == "0")
+            //{
+            //    this.WindowState = FormWindowState.Maximized;
+            //    btnMaximize.Tag = "1";
+            //}
+            //else
+            //{
+            //    this.WindowState = FormWindowState.Normal;
+            //    btnMaximize.Tag = "0";
+            //}
+        }
     }
 }

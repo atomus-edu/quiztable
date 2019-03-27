@@ -44,3 +44,4 @@ C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizT
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csproj.CoreCompileInputs.cache
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.exe
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.pdb
+C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csprojResolveAssemblyReference.cache

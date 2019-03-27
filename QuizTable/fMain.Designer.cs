@@ -33,10 +33,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.mainPage = new QuizTableCS.MainPage();
-            this.puzzlePage = new QuizTableCS.PuzzlePage();
-            this.settingsPage = new QuizTableCS.SettingsPage();
-            this.tablePage = new QuizTableCS.TablePage();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -45,6 +41,10 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.bntGame = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
+            this.mainPage = new QuizTableCS.MainPage();
+            this.puzzlePage = new QuizTableCS.PuzzlePage();
+            this.settingsPage = new QuizTableCS.SettingsPage();
+            this.tablePage = new QuizTableCS.TablePage();
             this.sidePanel.SuspendLayout();
             this.pTop.SuspendLayout();
             this.SuspendLayout();
@@ -88,45 +88,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "QuizTable";
             // 
-            // mainPage
-            // 
-            this.mainPage.BackColor = System.Drawing.Color.White;
-            this.mainPage.Location = new System.Drawing.Point(39, 27);
-            this.mainPage.Name = "mainPage";
-            this.mainPage.Size = new System.Drawing.Size(996, 542);
-            this.mainPage.TabIndex = 0;
-            // 
-            // puzzlePage
-            // 
-            this.puzzlePage.Location = new System.Drawing.Point(39, 27);
-            this.puzzlePage.Name = "puzzlePage";
-            this.puzzlePage.Size = new System.Drawing.Size(996, 542);
-            this.puzzlePage.TabIndex = 8;
-            // 
-            // settingsPage
-            // 
-            this.settingsPage.Location = new System.Drawing.Point(38, 27);
-            this.settingsPage.Name = "settingsPage";
-            this.settingsPage.Size = new System.Drawing.Size(997, 542);
-            this.settingsPage.TabIndex = 7;
-            // 
-            // tablePage
-            // 
-            this.tablePage.Location = new System.Drawing.Point(38, 27);
-            this.tablePage.Name = "tablePage";
-            this.tablePage.Size = new System.Drawing.Size(997, 542);
-            this.tablePage.TabIndex = 6;
-            // 
             // btnMinimize
             // 
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Image = global::QuizTableCS.Properties.Resources.minus_math_24px;
             this.btnMinimize.Location = new System.Drawing.Point(849, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(48, 27);
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnMaximize
             // 
@@ -138,8 +111,10 @@
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(48, 27);
             this.btnMaximize.TabIndex = 2;
+            this.btnMaximize.Tag = "0";
             this.btnMaximize.Text = " ";
             this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
             // btnExit
             // 
@@ -159,6 +134,7 @@
             // btnQuestion
             // 
             this.btnQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuestion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnQuestion.FlatAppearance.BorderSize = 0;
             this.btnQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuestion.Image = global::QuizTableCS.Properties.Resources.question_white_24;
@@ -224,6 +200,35 @@
             this.toolTip1.SetToolTip(this.btnTable, "Періодична таблиця");
             this.btnTable.UseVisualStyleBackColor = true;
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
+            // 
+            // mainPage
+            // 
+            this.mainPage.BackColor = System.Drawing.Color.White;
+            this.mainPage.Location = new System.Drawing.Point(39, 27);
+            this.mainPage.Name = "mainPage";
+            this.mainPage.Size = new System.Drawing.Size(996, 542);
+            this.mainPage.TabIndex = 0;
+            // 
+            // puzzlePage
+            // 
+            this.puzzlePage.Location = new System.Drawing.Point(39, 27);
+            this.puzzlePage.Name = "puzzlePage";
+            this.puzzlePage.Size = new System.Drawing.Size(996, 542);
+            this.puzzlePage.TabIndex = 8;
+            // 
+            // settingsPage
+            // 
+            this.settingsPage.Location = new System.Drawing.Point(38, 27);
+            this.settingsPage.Name = "settingsPage";
+            this.settingsPage.Size = new System.Drawing.Size(997, 542);
+            this.settingsPage.TabIndex = 7;
+            // 
+            // tablePage
+            // 
+            this.tablePage.Location = new System.Drawing.Point(38, 27);
+            this.tablePage.Name = "tablePage";
+            this.tablePage.Size = new System.Drawing.Size(997, 542);
+            this.tablePage.TabIndex = 6;
             // 
             // fMain
             // 
