@@ -1,4 +1,4 @@
-﻿namespace QuizTableCS
+﻿namespace QuizTable
 {
     partial class SettingsPage
     {

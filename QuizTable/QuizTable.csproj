@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D1ACA9AF-6315-4B11-8E4E-12D1BDC2F75B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>QuizTableCS</RootNamespace>
-    <AssemblyName>QuizTableCS</AssemblyName>
+    <RootNamespace>QuizTable</RootNamespace>
+    <AssemblyName>QuizTable</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
