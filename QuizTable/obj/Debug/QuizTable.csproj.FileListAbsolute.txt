@@ -45,3 +45,4 @@ C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.Settings
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.TablePage.resources
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.exe
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.pdb
+C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.AboutBox1.resources
