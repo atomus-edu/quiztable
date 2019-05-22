@@ -140,10 +140,9 @@
             this.pTop.Controls.Add(this.btnMaximize);
             this.pTop.Controls.Add(this.label1);
             this.pTop.Controls.Add(this.btnExit);
-            this.pTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pTop.Location = new System.Drawing.Point(40, 0);
+            this.pTop.Location = new System.Drawing.Point(0, 0);
             this.pTop.Name = "pTop";
-            this.pTop.Size = new System.Drawing.Size(993, 27);
+            this.pTop.Size = new System.Drawing.Size(1033, 27);
             this.pTop.TabIndex = 9;
             this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
             this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
@@ -155,7 +154,7 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = global::QuizTableCS.Properties.Resources.minus_math_24px;
-            this.btnMinimize.Location = new System.Drawing.Point(849, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(889, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(48, 27);
             this.btnMinimize.TabIndex = 3;
@@ -168,7 +167,7 @@
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.Image = global::QuizTableCS.Properties.Resources.maximize_24px;
-            this.btnMaximize.Location = new System.Drawing.Point(897, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(937, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(48, 27);
             this.btnMaximize.TabIndex = 2;
@@ -180,7 +179,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 7);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(46, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -192,7 +192,7 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::QuizTableCS.Properties.Resources.close2;
-            this.btnExit.Location = new System.Drawing.Point(945, 0);
+            this.btnExit.Location = new System.Drawing.Point(985, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(48, 27);
             this.btnExit.TabIndex = 0;
@@ -236,8 +236,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1033, 572);
-            this.Controls.Add(this.pTop);
             this.Controls.Add(this.sidePanel);
+            this.Controls.Add(this.pTop);
             this.Controls.Add(this.mainPage);
             this.Controls.Add(this.puzzlePage);
             this.Controls.Add(this.settingsPage);
