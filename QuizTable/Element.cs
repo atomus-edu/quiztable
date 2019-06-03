@@ -24,7 +24,7 @@ namespace QuizTableCS
 
         private string name;
 
-        public string MyProperty
+        public string Name
         {
             get { return name; }
         }

@@ -21,6 +21,7 @@ namespace QuizTableCS
         public TablePage()
         {
             InitializeComponent();
+            QuizTable.Initialize();
             InitializeGameField();
         }
 
@@ -30,7 +31,7 @@ namespace QuizTableCS
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    if (i == 0 && (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 8 || j == 9))
+                    if (i == 0 && (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 6 || j == 8 || j == 9))
                     {
                         // do nothing
                     }
@@ -41,7 +42,7 @@ namespace QuizTableCS
                     else
                     {
                         Panel p = new Panel();
-                        p.BackColor = Color.Gray;
+                        p.BackColor = Color.Blue;
                         p.Height = ELEM_HEIGHT;
                         p.Width = ELEM_WIDTH;
                         p.Left = X_START + ELEM_WIDTH * j + OFFSET * j;
@@ -50,22 +51,23 @@ namespace QuizTableCS
                         Label ls = new Label();
                         ls.Parent = p;
                         ls.ForeColor = Color.White;
-                        ls.Location = new System.Drawing.Point(35, 3);
+                        ls.Location = new System.Drawing.Point(55, 3);
                         ls.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        ls.Text = QuizTable.elements[i][j];// Symbol
+                        ls.Text = QuizTable.elements[i, j].Symbol;// Symbol
 
                         Label ln = new Label();
                         ln.Parent = p;
                         ln.ForeColor = Color.White;
                         ln.Location = new System.Drawing.Point(0, 1);
-                        ln.Text = "2234";// Number
+                        ln.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        ln.Text = QuizTable.elements[i, j].Number.ToString();// Number
 
                         Label lf = new Label();
                         lf.Parent = p;
                         lf.ForeColor = Color.White;
                         lf.Location = new System.Drawing.Point(0, 25);
                         lf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        lf.Text = "Heliumbumon";// Full Name
+                        lf.Text = QuizTable.elements[i, j].Name;// Full Name
 
                         Controls.Add(p);
                     }
