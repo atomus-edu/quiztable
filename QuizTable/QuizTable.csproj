@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Element.cs" />
     <Compile Include="AboutBox1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +79,7 @@
     <Compile Include="PuzzlePage.Designer.cs">
       <DependentUpon>PuzzlePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuizTable.cs" />
     <Compile Include="SettingsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
