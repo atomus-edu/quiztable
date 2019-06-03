@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuizTableCS
+namespace QuizTable
 {
     public partial class PuzzlePage : UserControl
     {
         const int OFFSET = 5;
         const int X_START = 15;
-        const int Y_START = 50;
-        const int ELEM_HEIGHT = 40;
-        const int ELEM_WIDTH = 70;
+        const int Y_START = 25;
+        const int ELEM_HEIGHT = 45;
+        const int ELEM_WIDTH = 80;
 
         public PuzzlePage()
         {
@@ -83,9 +83,12 @@ namespace QuizTableCS
                 
                 p.BackColor = Color.Gray;
                 p.Height = ELEM_HEIGHT;
-                p.Width = pSide.Width - 7*OFFSET;
+                //p.Width = pSide.Width - 7 * OFFSET;
+                p.Width = ELEM_WIDTH;
                 p.Left = 2*OFFSET;
                 p.Top = OFFSET + ELEM_HEIGHT*i + OFFSET*i;
+                p.Cursor = Cursors.Hand;
+                MoveControl.LearnToMove(p);
 
                 Label l = new Label();
                 l.ForeColor = Color.White;
@@ -98,5 +101,6 @@ namespace QuizTableCS
                 p.Parent = pSide;
             }
         }
+
     }
 }

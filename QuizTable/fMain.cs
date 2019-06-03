@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuizTableCS
+namespace QuizTable
 {
     public partial class fMain : Form
     {
@@ -132,6 +132,20 @@ namespace QuizTableCS
             Application.Exit();
         }
 
+        
+
+        // Design
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Red;
+            btnExit.Image =Properties.Resources.close;
+        }
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Transparent;
+            btnExit.Image = Properties.Resources.close2;
+        }
+
         // Move window
         private void pTop_MouseDown(object sender, MouseEventArgs e)
         {
@@ -161,18 +175,6 @@ namespace QuizTableCS
             {
                 isMouseDown = false;
             }
-        }
-
-        // Design
-        private void btnClose_MouseEnter(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.Red;
-            btnExit.Image =Properties.Resources.close;
-        }
-        private void btnClose_MouseLeave(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.Transparent;
-            btnExit.Image = Properties.Resources.close2;
         }
 
         // Form Shadow
@@ -260,6 +262,12 @@ namespace QuizTableCS
 
             frm.Region = new Region(path);
             frm.Show();
+        }
+
+        private void btnQuestion_Click(object sender, EventArgs e)
+        {
+            AboutBox1 a = new AboutBox1();
+            a.ShowDialog(); 
         }
     }
 }

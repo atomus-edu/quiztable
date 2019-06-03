@@ -1,4 +1,4 @@
-﻿namespace QuizTableCS
+﻿namespace QuizTable
 {
     partial class fMain
     {
@@ -41,10 +41,10 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.mainPage = new QuizTableCS.MainPage();
-            this.puzzlePage = new QuizTableCS.PuzzlePage();
-            this.settingsPage = new QuizTableCS.SettingsPage();
-            this.tablePage = new QuizTableCS.TablePage();
+            this.mainPage = new QuizTable.MainPage();
+            this.puzzlePage = new QuizTable.PuzzlePage();
+            this.settingsPage = new QuizTable.SettingsPage();
+            this.tablePage = new QuizTable.TablePage();
             this.sidePanel.SuspendLayout();
             this.pTop.SuspendLayout();
             this.SuspendLayout();
@@ -69,20 +69,21 @@
             this.btnQuestion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnQuestion.FlatAppearance.BorderSize = 0;
             this.btnQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuestion.Image = global::QuizTableCS.Properties.Resources.question_white_24;
+            this.btnQuestion.Image = global::QuizTable.Properties.Resources.question_white_24;
             this.btnQuestion.Location = new System.Drawing.Point(0, 532);
             this.btnQuestion.Name = "btnQuestion";
             this.btnQuestion.Size = new System.Drawing.Size(40, 40);
             this.btnQuestion.TabIndex = 4;
             this.toolTip1.SetToolTip(this.btnQuestion, "Довідник");
             this.btnQuestion.UseVisualStyleBackColor = true;
+            this.btnQuestion.Click += new System.EventHandler(this.btnQuestion_Click);
             // 
             // btnHome
             // 
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Image = global::QuizTableCS.Properties.Resources.home_white_24;
+            this.btnHome.Image = global::QuizTable.Properties.Resources.home_white_24;
             this.btnHome.Location = new System.Drawing.Point(0, 27);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(40, 40);
@@ -96,7 +97,7 @@
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Image = global::QuizTableCS.Properties.Resources.settings_white_24;
+            this.btnSettings.Image = global::QuizTable.Properties.Resources.settings_white_24;
             this.btnSettings.Location = new System.Drawing.Point(0, 147);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(40, 40);
@@ -110,7 +111,7 @@
             this.bntGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntGame.FlatAppearance.BorderSize = 0;
             this.bntGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntGame.Image = global::QuizTableCS.Properties.Resources.puzzle_white_24;
+            this.bntGame.Image = global::QuizTable.Properties.Resources.puzzle_white_24;
             this.bntGame.Location = new System.Drawing.Point(0, 67);
             this.bntGame.Name = "bntGame";
             this.bntGame.Size = new System.Drawing.Size(40, 40);
@@ -124,7 +125,7 @@
             this.btnTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTable.FlatAppearance.BorderSize = 0;
             this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTable.Image = global::QuizTableCS.Properties.Resources.table_white_24;
+            this.btnTable.Image = global::QuizTable.Properties.Resources.table_white_24;
             this.btnTable.Location = new System.Drawing.Point(0, 107);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(40, 40);
@@ -153,7 +154,7 @@
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::QuizTableCS.Properties.Resources.minus_math_24px;
+            this.btnMinimize.Image = global::QuizTable.Properties.Resources.minus_math_24px;
             this.btnMinimize.Location = new System.Drawing.Point(889, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(48, 27);
@@ -164,9 +165,10 @@
             // btnMaximize
             // 
             this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximize.Enabled = false;
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Image = global::QuizTableCS.Properties.Resources.maximize_24px;
+            this.btnMaximize.Image = global::QuizTable.Properties.Resources.maximize_24px;
             this.btnMaximize.Location = new System.Drawing.Point(937, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(48, 27);
@@ -191,7 +193,7 @@
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = global::QuizTableCS.Properties.Resources.close2;
+            this.btnExit.Image = global::QuizTable.Properties.Resources.close2;
             this.btnExit.Location = new System.Drawing.Point(985, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(48, 27);
@@ -270,9 +272,8 @@
         private PuzzlePage puzzlePage;
         private System.Windows.Forms.Panel pTop;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
+        private System.Windows.Forms.Label label1;
     }
 }
-
