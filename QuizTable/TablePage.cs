@@ -41,8 +41,13 @@ namespace QuizTableCS
                     }
                     else
                     {
+
                         Panel p = new Panel();
-                        p.BackColor = Color.Blue;
+
+                        if (QuizTable.elements[i, j].Type == "pink") { p.BackColor = Color.Pink; }
+                        else if (QuizTable.elements[i, j].Type == "yellow") { p.BackColor = Color.Yellow; }
+                        else if (QuizTable.elements[i, j].Type == "blue") { p.BackColor = Color.DeepSkyBlue; }
+                        
                         p.Height = ELEM_HEIGHT;
                         p.Width = ELEM_WIDTH;
                         p.Left = X_START + ELEM_WIDTH * j + OFFSET * j;
@@ -50,21 +55,21 @@ namespace QuizTableCS
 
                         Label ls = new Label();
                         ls.Parent = p;
-                        ls.ForeColor = Color.White;
+                        ls.ForeColor = Color.Black;
                         ls.Location = new System.Drawing.Point(55, 3);
                         ls.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                         ls.Text = QuizTable.elements[i, j].Symbol;// Symbol
 
                         Label ln = new Label();
                         ln.Parent = p;
-                        ln.ForeColor = Color.White;
+                        ln.ForeColor = Color.Black;
                         ln.Location = new System.Drawing.Point(0, 1);
                         ln.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                         ln.Text = QuizTable.elements[i, j].Number.ToString();// Number
 
                         Label lf = new Label();
                         lf.Parent = p;
-                        lf.ForeColor = Color.White;
+                        lf.ForeColor = Color.Black;
                         lf.Location = new System.Drawing.Point(0, 25);
                         lf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                         lf.Text = QuizTable.elements[i, j].Name;// Full Name
@@ -73,6 +78,15 @@ namespace QuizTableCS
                     }
                 }
             }
+            PictureBox pb = new PictureBox();
+            pb.Image = Image.FromFile("img\\mendeleev.jpg");
+            pb.SizeMode = PictureBoxSizeMode.StretchImage;
+            pb.Location = new System.Drawing.Point(X_START + 8*ELEM_WIDTH + 8*OFFSET, Y_START);
+            pb.Height = 3 * ELEM_HEIGHT + 2 * OFFSET;
+            pb.Width = 2 * ELEM_WIDTH + OFFSET;
+            pb.BackColor = Color.Gray;
+
+            Controls.Add(pb);
         }
     }
 }

@@ -338,3 +338,4 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 AdoExam/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+QuizTable/obj/Debug/QuizTable.csproj.GenerateResource.cache
