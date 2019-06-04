@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuizTable
+namespace QuizTableCS
 {
     public partial class MainPage : UserControl
     {
