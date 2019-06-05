@@ -13,9 +13,6 @@ namespace QuizTableCS
 {
     public partial class fMain : Form
     {
-        static Color Violet = Color.FromArgb(90, 45, 174);
-        static Color LightViolet = Color.FromArgb(242, 247, 253);
-
         // Move window
         private Point mouseOffset;
         private bool isMouseDown = false;
@@ -54,13 +51,12 @@ namespace QuizTableCS
 
         public fMain()
         {
-            
             InitializeComponent();
-            sidePanel.BackColor = Violet;
+            sidePanel.BackColor = QuizTable.Violet;
 
-            puzzlePage.BackColor = LightViolet;
-            tablePage.BackColor = LightViolet;
-            settingsPage.BackColor = LightViolet;
+            puzzlePage.BackColor = QuizTable.LightViolet;
+            tablePage.BackColor = QuizTable.LightViolet;
+            settingsPage.BackColor = QuizTable.LightViolet;
 
 
             DefaultPagePosition();
@@ -78,10 +74,10 @@ namespace QuizTableCS
             settingsPage.Visible = false;
 
             //default back color
-            btnHome.BackColor = Violet;
-            bntGame.BackColor = Violet;
-            btnTable.BackColor = Violet;
-            btnSettings.BackColor = Violet;
+            btnHome.BackColor = QuizTable.Violet;
+            bntGame.BackColor = QuizTable.Violet;
+            btnTable.BackColor = QuizTable.Violet;
+            btnSettings.BackColor = QuizTable.Violet;
 
             //default images
             btnHome.Image = Image.FromFile("img\\home_white_24.png");

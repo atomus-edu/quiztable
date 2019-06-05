@@ -21,6 +21,7 @@ namespace QuizTableCS
         public PuzzlePage()
         {
             InitializeComponent();
+            QuizTable.Initialize();            
             InitializeGameField();
             InitializeSideElements();
         }
@@ -31,7 +32,7 @@ namespace QuizTableCS
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    if (i == 0 && (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 8 || j == 9))
+                    if (i == 0 && (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 6 || j == 8 || j == 9))
                     {
                         // do nothing
                     }
@@ -48,27 +49,25 @@ namespace QuizTableCS
                         p.Left = pSide.Width + X_START + ELEM_WIDTH * j + OFFSET * j;
                         p.Top = Y_START + ELEM_HEIGHT * i + OFFSET * i;
 
-                        
-
                         Label ls = new Label();
                         ls.Parent = p;
                         ls.ForeColor = Color.White;
                         ls.Location = new System.Drawing.Point(35, 3);
                         ls.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        ls.Text = "Mn";// Symbol
+                        ls.Text = QuizTable.elements[i, j].Symbol;// Symbol
 
                         Label ln = new Label();
                         ln.Parent = p;
                         ln.ForeColor = Color.White;
                         ln.Location = new System.Drawing.Point(0, 1);
-                        ln.Text = "2234";// Number
+                        ln.Text = QuizTable.elements[i, j].Number.ToString();// Number
 
                         Label lf = new Label();
                         lf.Parent = p;
                         lf.ForeColor = Color.White;
                         lf.Location = new System.Drawing.Point(0, 25);
                         lf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        lf.Text = "Heliumbumon";// Full Name
+                        lf.Text = QuizTable.elements[i, j].Name;// Full Name
 
                         Controls.Add(p);
                     }
@@ -77,13 +76,12 @@ namespace QuizTableCS
         }
         private void InitializeSideElements()
         {
-            for (int i = 0; i < 80; i++)
+            for (int i = 0; i < QuizTable.elems.Count; i++)
             {
                 Panel p = new Panel();
                 
-                p.BackColor = Color.Gray;
+                p.BackColor = QuizTable.Violet;
                 p.Height = ELEM_HEIGHT;
-                //p.Width = pSide.Width - 7 * OFFSET;
                 p.Width = ELEM_WIDTH;
                 p.Left = 2*OFFSET;
                 p.Top = OFFSET + ELEM_HEIGHT*i + OFFSET*i;
@@ -93,14 +91,28 @@ namespace QuizTableCS
                 Label l = new Label();
                 l.ForeColor = Color.White;
                 l.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                //l.Location = new System.Drawing.Point(46, 7);
-                l.Text = "He";
+                l.Text = QuizTable.elems[i].Symbol;
                 l.Parent = p;
+
+                Label lf = new Label();
+                lf.Parent = p;
+                lf.ForeColor = Color.White;
+                lf.Location = new System.Drawing.Point(0, 25);
+                lf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                lf.Text = QuizTable.elems[i].Name;// Full Name
 
                 Controls.Add(p);
                 p.Parent = pSide;
             }
-        }
+            PictureBox pb = new PictureBox();
+            pb.Image = Image.FromFile("img\\mendeleev.jpg");
+            pb.SizeMode = PictureBoxSizeMode.StretchImage;
+            pb.Location = new System.Drawing.Point(pSide.Width + X_START + 8 * ELEM_WIDTH + 8 * OFFSET, Y_START);
+            pb.Height = 3 * ELEM_HEIGHT + 2 * OFFSET;
+            pb.Width = 2 * ELEM_WIDTH + OFFSET;
+            pb.BackColor = Color.Gray;
 
+            Controls.Add(pb);
+        }
     }
 }

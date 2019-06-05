@@ -41,10 +41,9 @@ namespace QuizTableCS
                     }
                     else
                     {
-
                         Panel p = new Panel();
 
-                        if (QuizTable.elements[i, j].Type == "pink") { p.BackColor = Color.Pink; }
+                        if (QuizTable.elements[i, j].Type == "pink") { p.BackColor = Color.Pink; }// floyd
                         else if (QuizTable.elements[i, j].Type == "yellow") { p.BackColor = Color.Yellow; }
                         else if (QuizTable.elements[i, j].Type == "blue") { p.BackColor = Color.DeepSkyBlue; }
                         

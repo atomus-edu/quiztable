@@ -36,17 +36,25 @@ namespace QuizTableCS
             get { return type; }
         }
 
+        private string link; // wiki link
+
+        public string Link
+        {
+            get { return link; }
+        }
+
         public Element()
         {
 
         }
 
-        public Element(int number, string symbol, string name, string type)
+        public Element(int number, string symbol, string name, string type, string link)
         {
             this.number = number;
             this.symbol = symbol;
             this.name = name;
             this.type = type;
+            this.link = link;
         }
     }
 }
