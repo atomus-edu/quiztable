@@ -1,4 +1,4 @@
-﻿namespace QuizTable
+﻿namespace QuizTableCS
 {
     partial class TablePage
     {

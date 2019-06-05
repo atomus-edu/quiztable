@@ -1,4 +1,4 @@
-﻿namespace QuizTable
+﻿namespace QuizTableCS
 {
     partial class MainPage
     {
@@ -36,8 +36,10 @@
             this.smalPanel = new System.Windows.Forms.Panel();
             this.smallRichTextBox = new System.Windows.Forms.RichTextBox();
             this.lblSmalPanel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bigPanel.SuspendLayout();
             this.smalPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMain
@@ -45,9 +47,9 @@
             this.lblMain.AutoSize = true;
             this.lblMain.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblMain.ForeColor = System.Drawing.Color.Indigo;
-            this.lblMain.Location = new System.Drawing.Point(48, 36);
+            this.lblMain.Location = new System.Drawing.Point(125, 48);
             this.lblMain.Name = "lblMain";
-            this.lblMain.Size = new System.Drawing.Size(148, 40);
+            this.lblMain.Size = new System.Drawing.Size(145, 40);
             this.lblMain.TabIndex = 0;
             this.lblMain.Text = "QuizTable";
             // 
@@ -80,9 +82,9 @@
             this.lblBigPanel.ForeColor = System.Drawing.Color.Indigo;
             this.lblBigPanel.Location = new System.Drawing.Point(14, 9);
             this.lblBigPanel.Name = "lblBigPanel";
-            this.lblBigPanel.Size = new System.Drawing.Size(247, 25);
+            this.lblBigPanel.Size = new System.Drawing.Size(284, 25);
             this.lblBigPanel.TabIndex = 3;
-            this.lblBigPanel.Text = "Lorem ipsum dolor sit amet";
+            this.lblBigPanel.Text = "Ласкаво просимо до QuizTable";
             // 
             // smalPanel
             // 
@@ -114,15 +116,25 @@
             this.lblSmalPanel.ForeColor = System.Drawing.Color.Indigo;
             this.lblSmalPanel.Location = new System.Drawing.Point(9, 9);
             this.lblSmalPanel.Name = "lblSmalPanel";
-            this.lblSmalPanel.Size = new System.Drawing.Size(181, 25);
+            this.lblSmalPanel.Size = new System.Drawing.Size(118, 25);
             this.lblSmalPanel.TabIndex = 3;
-            this.lblSmalPanel.Text = "Lorem ipsum dolor?";
+            this.lblSmalPanel.Text = "Що нового?";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Indigo;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.smalPanel);
             this.Controls.Add(this.bigPanel);
             this.Controls.Add(this.lblMain);
@@ -132,6 +144,7 @@
             this.bigPanel.PerformLayout();
             this.smalPanel.ResumeLayout(false);
             this.smalPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +159,6 @@
         private System.Windows.Forms.Label lblSmalPanel;
         private System.Windows.Forms.RichTextBox bigRichTextBox;
         private System.Windows.Forms.RichTextBox smallRichTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
