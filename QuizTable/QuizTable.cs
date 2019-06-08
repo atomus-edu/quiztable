@@ -129,5 +129,31 @@ namespace QuizTableCS
                 }
             }
         }
+
+        static public List<Element> ShuffleList(List<Element> list)
+        {
+            Random r = new Random();
+
+            for (int i = 0; i < list.Count; i++)// shuffle list
+            {
+                Element tmp = list[i];
+                list.RemoveAt(i);
+                list.Insert(r.Next(list.Count), tmp);
+            }
+
+            return list;
+        }
+
+        static public void ShuffleElements()
+        {
+            Random r = new Random();
+
+            for (int i = 0; i < elems.Count; i++)// shuffle elems
+            {
+                Element tmp = elems[i];
+                elems.RemoveAt(i);
+                elems.Insert(r.Next(elems.Count), tmp);
+            }
+        }
     }
 }

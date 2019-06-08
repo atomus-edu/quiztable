@@ -76,7 +76,10 @@ namespace QuizTableCS
         }
         private void InitializeSideElements()
         {
-            for (int i = 0; i < QuizTable.elems.Count; i++)
+
+            List<Element> e = QuizTable.ShuffleList(QuizTable.elems);
+
+            for (int i = 0; i < e.Count; i++)
             {
                 Panel p = new Panel();
                 
@@ -91,7 +94,7 @@ namespace QuizTableCS
                 Label l = new Label();
                 l.ForeColor = Color.White;
                 l.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                l.Text = QuizTable.elems[i].Symbol;
+                l.Text = e[i].Symbol;
                 l.Parent = p;
 
                 Label lf = new Label();
@@ -99,7 +102,7 @@ namespace QuizTableCS
                 lf.ForeColor = Color.White;
                 lf.Location = new System.Drawing.Point(0, 25);
                 lf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                lf.Text = QuizTable.elems[i].Name;// Full Name
+                lf.Text = e[i].Name;// Full Name
 
                 Controls.Add(p);
                 p.Parent = pSide;

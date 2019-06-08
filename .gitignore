@@ -329,3 +329,5 @@ QuizTable/obj/Debug/QuizTable.csproj.GenerateResource.cache
 .vs/QuizTable/v15/.suo
 *.ide-wal
 *.ide-shm
+QuizTable/bin/Debug/QuizTable.exe
+QuizTable/obj/Debug/QuizTable.exe
