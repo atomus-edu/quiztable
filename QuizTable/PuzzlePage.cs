@@ -18,10 +18,18 @@ namespace QuizTableCS
         const int ELEM_HEIGHT = 45;
         const int ELEM_WIDTH = 80;
 
+        // Move
+        bool isPress = false;
+        bool IsPress { get { return isPress; } }
+        Point startPst;
+        int startTop;
+        int startLeft;
+
         public PuzzlePage()
         {
             InitializeComponent();
-            QuizTable.Initialize();            
+
+            QuizTable.Initialize();
             InitializeGameField();
             InitializeSideElements();
         }
@@ -36,7 +44,7 @@ namespace QuizTableCS
                     {
                         // do nothing
                     }
-                    else if((i == 1|| i == 2|| i == 4|| i == 6 || i == 8) && (j ==8 ||j==9))
+                    else if ((i == 1 || i == 2 || i == 4 || i == 6 || i == 8) && (j == 8 || j == 9))
                     {
                         // do nothing
                     }
@@ -76,20 +84,14 @@ namespace QuizTableCS
         }
         private void InitializeSideElements()
         {
-
             List<Element> e = QuizTable.ShuffleList(QuizTable.elems);
 
             for (int i = 0; i < e.Count; i++)
             {
                 Panel p = new Panel();
-                
                 p.BackColor = QuizTable.Violet;
                 p.Height = ELEM_HEIGHT;
                 p.Width = ELEM_WIDTH;
-                p.Left = 2*OFFSET;
-                p.Top = OFFSET + ELEM_HEIGHT*i + OFFSET*i;
-                p.Cursor = Cursors.Hand;
-                MoveControl.LearnToMove(p);
 
                 Label l = new Label();
                 l.ForeColor = Color.White;
@@ -104,9 +106,25 @@ namespace QuizTableCS
                 lf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                 lf.Text = e[i].Name;// Full Name
 
-                Controls.Add(p);
-                p.Parent = pSide;
+                // Bitmap
+                Bitmap bm = new Bitmap(ELEM_WIDTH, ELEM_HEIGHT);
+                p.DrawToBitmap(bm, new Rectangle(0, 0, ELEM_WIDTH, ELEM_HEIGHT));
+
+                // PictureBox
+                PictureBox pbx = new PictureBox();
+
+                pbx.Height = ELEM_HEIGHT;
+                pbx.Width = ELEM_WIDTH;
+                pbx.Left = 2 * OFFSET;
+                pbx.Top = OFFSET + ELEM_HEIGHT * i + OFFSET * i;
+                pbx.Cursor = Cursors.Hand;
+                pbx.Image = bm;
+
+                Controls.Add(pbx);
+                LearnToMove(pbx);
+                pbx.Parent = pSide;
             }
+
             PictureBox pb = new PictureBox();
             pb.Image = Image.FromFile("img\\mendeleev.jpg");
             pb.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -116,6 +134,77 @@ namespace QuizTableCS
             pb.BackColor = Color.Gray;
 
             Controls.Add(pb);
+        }
+
+        // Move
+        // Функция выполняется при нажатии на перемещаемый контрол
+        private void mDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) return;//проверка что нажата левая кнопка
+            isPress = true;
+            startPst = e.Location;
+
+            PictureBox pb = (PictureBox)sender;
+            startTop = pb.Top;
+            startLeft = pb.Left;
+        }
+
+        // Функция выполняется при отжатии перемещаемого контрола
+        private void mUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) return;//проверка что нажата левая кнопка
+            isPress = false;
+
+            PictureBox pb = (PictureBox)sender;
+            pb.Top = startTop;
+            pb.Left = startLeft;
+            pb.Parent = pSide;
+        }
+
+        /// Функция выполняется при перемещении контрола
+        private void mMove(object sender, MouseEventArgs e)
+        {
+            if (isPress)
+            {
+                PictureBox pb = (PictureBox)sender;
+                pb.Top += e.Y - startPst.Y;
+                pb.Left += e.X - startPst.X;
+
+                //int x = Cursor.Position.X - this.Position.X;
+                //int y = Cursor.Position.Y - this.Position.Y;
+
+                if (pb.Left >= 20 && pb.Parent == pSide)
+                {
+                    pb.Parent = this;
+                    pb.BringToFront();
+                }
+                else if (pb.Left < 20 && pb.Parent == this)
+                {
+                    pb.Parent = pSide;
+                }
+                else if (pb.Left < 0 && pb.Parent == pSide)
+                {
+                    pb.Left = 0;
+                    //e.X = MoveControl.startPst.X;
+                    //e.Y = MoveControl.startPst.Y;
+                }
+                else if (pb.Top < 0)
+                {
+                    pb.Top = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        public void LearnToMove(object sender)
+        {
+            PictureBox pb = (PictureBox)sender;
+            pb.MouseDown += new MouseEventHandler(mDown);
+            pb.MouseUp += new MouseEventHandler(mUp);
+            pb.MouseMove += new MouseEventHandler(mMove);
         }
     }
 }
