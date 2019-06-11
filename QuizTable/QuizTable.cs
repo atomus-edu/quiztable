@@ -148,7 +148,7 @@ namespace QuizTableCS
         {
             Random r = new Random();
 
-            for (int i = 0; i < elems.Count; i++)// shuffle elems
+            for (int i = 0; i < elems.Count*elems.Count; i++)// shuffle elems
             {
                 Element tmp = elems[i];
                 elems.RemoveAt(i);

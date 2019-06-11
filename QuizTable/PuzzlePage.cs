@@ -56,6 +56,7 @@ namespace QuizTableCS
                         p.Width = ELEM_WIDTH;
                         p.Left = pSide.Width + X_START + ELEM_WIDTH * j + OFFSET * j;
                         p.Top = Y_START + ELEM_HEIGHT * i + OFFSET * i;
+                        p.Tag = QuizTable.elements[i, j].Symbol;
 
                         Label ls = new Label();
                         ls.Parent = p;
@@ -119,10 +120,11 @@ namespace QuizTableCS
                 pbx.Top = OFFSET + ELEM_HEIGHT * i + OFFSET * i;
                 pbx.Cursor = Cursors.Hand;
                 pbx.Image = bm;
-
+                
                 Controls.Add(pbx);
                 LearnToMove(pbx);
                 pbx.Parent = pSide;
+                pbx.Tag = e[i].Symbol;
             }
 
             PictureBox pb = new PictureBox();
@@ -156,9 +158,35 @@ namespace QuizTableCS
             isPress = false;
 
             PictureBox pb = (PictureBox)sender;
-            pb.Top = startTop;
-            pb.Left = startLeft;
-            pb.Parent = pSide;
+            Control selected = null;
+
+            foreach (Control item in this.Controls)
+                if (item.Tag == pb.Tag)
+                    selected = item;
+
+            if (selected != null)
+            {
+                
+
+                if (pb.Left >= (selected.Left - 10)
+                    && pb.Left <= (selected.Left + ELEM_WIDTH + 10)
+                    && pb.Top >= (selected.Top - 10)
+                    && pb.Top <= (selected.Top + ELEM_HEIGHT + 10))// keep element
+                {
+                    pb.Hide();
+                    selected.BackColor = QuizTable.Violet;
+
+                }
+                else// return element to side panel
+                {
+                    pb.Show();
+                    pb.Top = startTop;
+                    pb.Left = startLeft;
+                    pb.Parent = pSide;
+                }
+            }
+            else
+                MessageBox.Show("selected == null");
         }
 
         /// Функция выполняется при перемещении контрола
@@ -170,8 +198,7 @@ namespace QuizTableCS
                 pb.Top += e.Y - startPst.Y;
                 pb.Left += e.X - startPst.X;
 
-                //int x = Cursor.Position.X - this.Position.X;
-                //int y = Cursor.Position.Y - this.Position.Y;
+                //label1.Text = e.X + " - " + Cursor.Position.X + " - " + this.Left;
 
                 if (pb.Left >= 20 && pb.Parent == pSide)
                 {
@@ -181,20 +208,15 @@ namespace QuizTableCS
                 else if (pb.Left < 20 && pb.Parent == this)
                 {
                     pb.Parent = pSide;
-                }
+                    pb.BringToFront();
+                } 
                 else if (pb.Left < 0 && pb.Parent == pSide)
                 {
                     pb.Left = 0;
-                    //e.X = MoveControl.startPst.X;
-                    //e.Y = MoveControl.startPst.Y;
                 }
                 else if (pb.Top < 0)
                 {
                     pb.Top = 0;
-                }
-                else
-                {
-
                 }
             }
         }
