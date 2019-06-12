@@ -11,7 +11,9 @@ namespace QuizTableCS
     public abstract class MoveControl
     {
         static bool isPress = false;
-        static Point startPst;
+        public static bool IsPress { get { return isPress; } }
+        static public Point startPst;
+
         /// <summary>
         /// Функция выполняется при нажатии на перемещаемый контрол
         /// </summary>
@@ -45,6 +47,9 @@ namespace QuizTableCS
                 Control control = (Control)sender;
                 control.Top += e.Y - startPst.Y;
                 control.Left += e.X - startPst.X;
+                
+                //control.Parent = 
+                //PuzzlePage.ChangeParent(control, e);
             }
         }
         /// <summary>
