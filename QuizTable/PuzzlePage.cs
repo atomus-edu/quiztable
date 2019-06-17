@@ -166,8 +166,6 @@ namespace QuizTableCS
 
             if (selected != null)
             {
-                
-
                 if (pb.Left >= (selected.Left - 10)
                     && pb.Left <= (selected.Left + ELEM_WIDTH + 10)
                     && pb.Top >= (selected.Top - 10)
@@ -176,6 +174,10 @@ namespace QuizTableCS
                     pb.Hide();
                     selected.BackColor = QuizTable.Violet;
 
+                    // update side elements
+                    foreach (PictureBox item in pSide.Controls)
+                        if (item.Top > startTop)
+                            item.Top -= ELEM_HEIGHT + OFFSET;
                 }
                 else// return element to side panel
                 {
