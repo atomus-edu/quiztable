@@ -59,6 +59,7 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game.cs" />
     <Compile Include="MainPage.cs">
       <SubType>UserControl</SubType>
     </Compile>

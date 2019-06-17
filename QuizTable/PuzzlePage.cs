@@ -12,6 +12,8 @@ namespace QuizTableCS
 {
     public partial class PuzzlePage : UserControl
     {
+        Game currentGame;
+        // Markup
         const int OFFSET = 5;
         const int X_START = 15;
         const int Y_START = 25;
@@ -29,6 +31,7 @@ namespace QuizTableCS
         {
             InitializeComponent();
 
+            currentGame = new Game();
             QuizTable.Initialize();
             InitializeGameField();
             InitializeSideElements();
@@ -178,14 +181,18 @@ namespace QuizTableCS
                     foreach (PictureBox item in pSide.Controls)
                         if (item.Top > startTop)
                             item.Top -= ELEM_HEIGHT + OFFSET;
+                    currentGame.Answer(true);
                 }
                 else// return element to side panel
                 {
-                    pb.Show();
                     pb.Top = startTop;
                     pb.Left = startLeft;
                     pb.Parent = pSide;
+
+                    currentGame.Answer(false);
                 }
+                lblCorrectAnsw.Text = currentGame.CorrectAnswers.ToString();
+                lblWrongAnsw.Text = currentGame.WrongAnswers.ToString();
             }
             else
                 MessageBox.Show("selected == null");
