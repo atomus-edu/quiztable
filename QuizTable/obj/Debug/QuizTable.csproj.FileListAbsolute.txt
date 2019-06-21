@@ -12,9 +12,6 @@ C:\Users\Александр\Documents\GitHub\QuizTable\QuizTableCS\obj\Debug\Qui
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTableCS\obj\Debug\QuizTable.csproj.CoreCompileInputs.cache
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTableCS\obj\Debug\QuizTableCS.exe
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTableCS\obj\Debug\QuizTableCS.pdb
-C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTableCS.exe.config
-C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTableCS.exe
-C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTableCS.pdb
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csprojAssemblyReference.cache
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.fMain.resources
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.MainPage.resources
@@ -24,8 +21,6 @@ C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizT
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.TablePage.resources
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csproj.GenerateResource.cache
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csproj.CoreCompileInputs.cache
-C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.exe
-C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.pdb
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTable.exe.config
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTable.exe
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTable.pdb
@@ -46,3 +41,9 @@ C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csproj.G
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.exe
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.pdb
 C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTable.exe.config
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTable.exe
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizTable.pdb
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.AboutBox1.resources
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.exe
+C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.pdb

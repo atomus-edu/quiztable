@@ -335,3 +335,6 @@ QuizTable/bin/Debug/QuizTable.exe
 QuizTable/obj/Debug/QuizTable.exe
 QuizTable/obj/Debug/QuizTable.exe
 *.exe
+*.cache
+*.exe
+.vs/QuizTable/v15/.suo
