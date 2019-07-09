@@ -30,11 +30,7 @@ namespace QuizTableCS
         public PuzzlePage()
         {
             InitializeComponent();
-
             currentGame = new Game();
-            QuizTable.Initialize();
-            InitializeGameField();
-            InitializeSideElements();
         }
 
         private void InitializeGameField()
@@ -236,6 +232,24 @@ namespace QuizTableCS
             pb.MouseDown += new MouseEventHandler(mDown);
             pb.MouseUp += new MouseEventHandler(mUp);
             pb.MouseMove += new MouseEventHandler(mMove);
+        }
+
+        private void PuzzlePage_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                PuzzleDialog pd = new PuzzleDialog();
+
+                pd.ShowDialog();
+
+                if(pd.DialogResult == DialogResult.OK)
+                {
+                    QuizTable.Initialize();
+                    InitializeGameField();
+                    InitializeSideElements();
+                }
+
+            }
         }
     }
 }

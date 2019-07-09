@@ -47,3 +47,4 @@ C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\bin\Debug\QuizT
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.AboutBox1.resources
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.exe
 C:\Users\Александр\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTable.pdb
+C:\Users\vital\Documents\GitHub\QuizTable\QuizTable\obj\Debug\QuizTableCS.PuzzleDialog.resources

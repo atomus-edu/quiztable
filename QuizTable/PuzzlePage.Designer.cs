@@ -103,6 +103,7 @@
             this.Controls.Add(this.pSide);
             this.Name = "PuzzlePage";
             this.Size = new System.Drawing.Size(996, 542);
+            this.VisibleChanged += new System.EventHandler(this.PuzzlePage_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
