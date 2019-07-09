@@ -30,7 +30,9 @@ namespace QuizTableCS
         public PuzzlePage()
         {
             InitializeComponent();
-            currentGame = new Game();
+            pDialog.BackColor = QuizTable.Violet;
+            pDialog.Visible = true;
+            btnStart.BackColor = QuizTable.Violet;
         }
 
         private void InitializeGameField()
@@ -238,17 +240,42 @@ namespace QuizTableCS
         {
             if (this.Visible)
             {
-                PuzzleDialog pd = new PuzzleDialog();
 
-                pd.ShowDialog();
+            }
+        }
 
-                if(pd.DialogResult == DialogResult.OK)
-                {
-                    QuizTable.Initialize();
-                    InitializeGameField();
-                    InitializeSideElements();
-                }
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            if (pbSuccess.Visible)
+            {
+                
+                pDialog.Visible = false;
+                pSuccess.Visible = false;
+            }
+            else
+            {
+                btnStart.BackColor = QuizTable.Violet;
+                pDialog.UseWaitCursor = true;
+                progressBar1.PerformStep();
 
+                QuizTable.Initialize();
+                progressBar1.PerformStep();
+
+                InitializeGameField();
+                progressBar1.PerformStep();
+
+                InitializeSideElements();
+                progressBar1.PerformStep();
+
+                currentGame = new Game();
+                progressBar1.PerformStep();
+
+                pDialog.UseWaitCursor = false;
+
+                // game loaded
+                pSuccess.Visible = true;
+                pSuccess.BringToFront();
+                btnStart.BackColor = Color.Green;
             }
         }
     }

@@ -15,11 +15,17 @@ namespace QuizTableCS
         public PuzzleDialog()
         {
             InitializeComponent();
+            this.BackColor = QuizTable.Violet;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
