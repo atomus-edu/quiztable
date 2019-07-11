@@ -12,6 +12,8 @@ namespace QuizTableCS
 {
     public partial class PuzzlePage : UserControl
     {
+        Game currentGame;
+        // Markup
         const int OFFSET = 5;
         const int X_START = 15;
         const int Y_START = 25;
@@ -28,10 +30,9 @@ namespace QuizTableCS
         public PuzzlePage()
         {
             InitializeComponent();
-
-            QuizTable.Initialize();
-            InitializeGameField();
-            InitializeSideElements();
+            pDialog.BackColor = QuizTable.Violet;
+            pDialog.Visible = true;
+            btnStart.BackColor = QuizTable.Violet;
         }
 
         private void InitializeGameField()
@@ -166,8 +167,6 @@ namespace QuizTableCS
 
             if (selected != null)
             {
-                
-
                 if (pb.Left >= (selected.Left - 10)
                     && pb.Left <= (selected.Left + ELEM_WIDTH + 10)
                     && pb.Top >= (selected.Top - 10)
@@ -176,14 +175,22 @@ namespace QuizTableCS
                     pb.Hide();
                     selected.BackColor = QuizTable.Violet;
 
+                    // update side elements
+                    foreach (PictureBox item in pSide.Controls)
+                        if (item.Top > startTop)
+                            item.Top -= ELEM_HEIGHT + OFFSET;
+                    currentGame.Answer(true);
                 }
                 else// return element to side panel
                 {
-                    pb.Show();
                     pb.Top = startTop;
                     pb.Left = startLeft;
                     pb.Parent = pSide;
+
+                    currentGame.Answer(false);
                 }
+                lblCorrectAnsw.Text = currentGame.CorrectAnswers.ToString();
+                lblWrongAnsw.Text = currentGame.WrongAnswers.ToString();
             }
             else
                 MessageBox.Show("selected == null");
@@ -227,6 +234,49 @@ namespace QuizTableCS
             pb.MouseDown += new MouseEventHandler(mDown);
             pb.MouseUp += new MouseEventHandler(mUp);
             pb.MouseMove += new MouseEventHandler(mMove);
+        }
+
+        private void PuzzlePage_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+
+            }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            if (pbSuccess.Visible)
+            {
+                
+                pDialog.Visible = false;
+                pSuccess.Visible = false;
+            }
+            else
+            {
+                btnStart.BackColor = QuizTable.Violet;
+                pDialog.UseWaitCursor = true;
+                progressBar1.PerformStep();
+
+                QuizTable.Initialize();
+                progressBar1.PerformStep();
+
+                InitializeGameField();
+                progressBar1.PerformStep();
+
+                InitializeSideElements();
+                progressBar1.PerformStep();
+
+                currentGame = new Game();
+                progressBar1.PerformStep();
+
+                pDialog.UseWaitCursor = false;
+
+                // game loaded
+                pSuccess.Visible = true;
+                pSuccess.BringToFront();
+                btnStart.BackColor = Color.Green;
+            }
         }
     }
 }

@@ -56,5 +56,14 @@ namespace QuizTableCS
             this.type = type;
             this.link = link;
         }
+
+        public Element(int number, string symbol, string name, string type)
+        {
+            this.number = number;
+            this.symbol = symbol;
+            this.name = name;
+            this.type = type;
+            this.link = "https://uk.wikipedia.org/wiki/" + this.name;
+        }
     }
 }

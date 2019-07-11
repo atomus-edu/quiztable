@@ -51,27 +51,33 @@ namespace QuizTableCS
                         p.Width = ELEM_WIDTH;
                         p.Left = X_START + ELEM_WIDTH * j + OFFSET * j;
                         p.Top = Y_START + ELEM_HEIGHT * i + OFFSET * i;
+                        p.Tag = QuizTable.elements[i, j].Link;
 
                         Label ls = new Label();
                         ls.Parent = p;
                         ls.ForeColor = Color.Black;
-                        ls.Location = new System.Drawing.Point(55, 3);
-                        ls.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        ls.Location = new Point(55, 3);
+                        ls.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
                         ls.Text = QuizTable.elements[i, j].Symbol;// Symbol
 
                         Label ln = new Label();
                         ln.Parent = p;
                         ln.ForeColor = Color.Black;
-                        ln.Location = new System.Drawing.Point(0, 1);
-                        ln.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        ln.Location = new Point(0, 1);
+                        ln.Font = new Font("Microsoft Sans Serif", 9.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
                         ln.Text = QuizTable.elements[i, j].Number.ToString();// Number
 
                         Label lf = new Label();
                         lf.Parent = p;
                         lf.ForeColor = Color.Black;
-                        lf.Location = new System.Drawing.Point(0, 25);
-                        lf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        lf.Location = new Point(0, 25);
+                        lf.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
                         lf.Text = QuizTable.elements[i, j].Name;// Full Name
+
+                        p.MouseClick += new MouseEventHandler(element_Click);
+                        ls.MouseClick += new MouseEventHandler(element_Click);
+                        ln.MouseClick += new MouseEventHandler(element_Click);
+                        lf.MouseClick += new MouseEventHandler(element_Click);
 
                         Controls.Add(p);
                     }
@@ -80,12 +86,24 @@ namespace QuizTableCS
             PictureBox pb = new PictureBox();
             pb.Image = Image.FromFile("img\\mendeleev.jpg");
             pb.SizeMode = PictureBoxSizeMode.StretchImage;
-            pb.Location = new System.Drawing.Point(X_START + 8*ELEM_WIDTH + 8*OFFSET, Y_START);
+            pb.Location = new Point(X_START + 8*ELEM_WIDTH + 8*OFFSET, Y_START);
             pb.Height = 3 * ELEM_HEIGHT + 2 * OFFSET;
             pb.Width = 2 * ELEM_WIDTH + OFFSET;
             pb.BackColor = Color.Gray;
 
             Controls.Add(pb);
+        }
+
+        private void element_Click(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) return;//проверка что нажата левая кнопка
+
+            Control control = (Control)sender;
+
+            if (control.Tag != null) // Panel
+                System.Diagnostics.Process.Start(control.Tag.ToString());
+            else // Other
+                System.Diagnostics.Process.Start(control.Parent.Tag.ToString());
         }
     }
 }
